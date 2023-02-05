@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="bai3.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body ng-app="myapp">
+    <div ng-controller="myctrl">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Hình</th>
+                    <th scope="col">Họ Và Tên</th>
+                    <th scope="col">Ngày Sinh</th>
+                    <th scope="col">Giới Tính</th>
+                    <th scope="col">Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="if in info">
+                    <td><img src="img/{{ifin.photo}}" alt=""></td>
+                    <td>{{if.ten}}</td>
+                    <td>{{if.ngaysinh}}</td>
+                    <td>{{if.gioitinh}}</td>
+                    <td>{{if.avg}}</td>
+                </tr>
+            </tbody>
+        </table> 
+        
+        <h1 ng-mousemove="myFunc()">Dua Chuot Vao</h1>
+        {{ count }}
+        <input type="text" ng-model="test">
+        <button ng-click="sayHello()">testClick</button>
+        {{ abcd }}
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</html>
